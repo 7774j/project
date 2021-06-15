@@ -21,6 +21,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import {RecipesComponent} from './recipes/recipes.component';
 
 
 
@@ -40,6 +41,7 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
     RecipeEditComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    RecipesComponent
 
 
 
