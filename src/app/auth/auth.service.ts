@@ -55,9 +55,10 @@ export class AuthService {
     )
     .pipe(
       catchError(this.handleError), tap(resData =>{
-        this.handleAuthentication(resData.email, resData.localId, resData.idToken, +resData.expiresIn );
+        this.handleAuthentication(resData.email, resData.localId, resData.idToken, +resData.expiresIn
+        );
       })
-      );
+    );
   }
 
   autoLogin(){
@@ -71,7 +72,8 @@ export class AuthService {
     if (!userData){
     return;
   }
-    const loadedUser = new User(userData.email,
+    const loadedUser = new User(
+      userData.email,
       userData.id,
       userData._token,
       new Date(userData._tokenExpirationDate)
@@ -79,8 +81,8 @@ export class AuthService {
     if (loadedUser.token) {
       this.user.next(loadedUser);
       const expirationDuration =
-       (new Date(userData._tokenExpirationDate).getTime() -
-       new Date().getTime());
+       new Date(userData._tokenExpirationDate).getTime() -
+       new Date().getTime();
       this.autoLogout(expirationDuration);
     }
   }
@@ -102,7 +104,8 @@ export class AuthService {
 
   }
 
-  private handleAuthentication(email: string, userId: string, token: string, expiresIn: number) {
+  private handleAuthentication(email: string, userId: string, token: string, expiresIn: number
+    ) {
     const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
     const user = new User(
           email,
@@ -128,7 +131,7 @@ export class AuthService {
             errorMessage = 'This email not found';
             break;
           case 'INVALID_PASSWORD':
-            errorMessage = 'Invald password';
+            errorMessage = 'Invalid password';
             break;
       }
 
