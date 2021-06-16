@@ -15,7 +15,7 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-
+import { RecipesComponent } from './recipes/recipes.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
@@ -30,6 +30,7 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
     HeaderComponent,
     DropdownDirective,
     AuthComponent,
+    RecipesComponent,
     RecipeDetailComponent,
     RecipeItemComponent,
     RecipeListComponent,
