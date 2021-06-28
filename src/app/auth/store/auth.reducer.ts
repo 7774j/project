@@ -1,4 +1,5 @@
 
+import { AuthComponent } from "../auth.component";
 import { User } from "../user.model";
 import * as AuthActions from "./auth.actions";
 
@@ -31,6 +32,7 @@ export function authReducer(state = initialState, action: AuthActions.AuthAction
         user: null
       };
     case AuthActions.LOGIN_START:
+    case AuthActions.SIGNUP_START:
       return {
         ...state,
         authError: null,
@@ -42,6 +44,11 @@ export function authReducer(state = initialState, action: AuthActions.AuthAction
         user: null,
         authError: action.payload,
         loading: false
+      };
+    case AuthActions.CLEAR_ERROR:
+      return {
+        ...state,
+        AuthError: null
       };
       default:
         return state;
