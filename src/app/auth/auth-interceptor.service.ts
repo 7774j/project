@@ -5,7 +5,7 @@ import { take, exhaustMap, map,  } from "rxjs/operators";
 import { Store } from "@ngrx/store";
 import * as fromApp from '../store/app.reducer'
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthInterceptorService implements HttpInterceptor {
 constructor(private authService: AuthService, private store: Store<fromApp.AppState>){}
 
